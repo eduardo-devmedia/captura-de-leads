@@ -97,11 +97,11 @@ class LeadCapture {
   getFormData() {
     const nome = nomeInput.value.trim();
     const ddd = dddInput.value.trim();
-    const telefone = telefoneInput.value.replace(/\D/g, ''); // Remove formatação
+    const telefone = telefoneInput.value;
     
     return {
       nome,
-      telefone: `${ddd}${telefone}` // Concatena DDD + telefone
+      telefone: `(${ddd}) ${telefone}` // Concatena DDD + telefone
     };
   }
 
